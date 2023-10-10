@@ -294,6 +294,7 @@ Eclipse también nos permite ver un histórico de la refactorización que se ha 
 
 # Herramientas para el control de versiones
 
+
 ## Introducción
 
 Se llama control de versiones a la gestión de los diversos cambios que se realizan sobre los elementos de algún producto o una configuración del mismo.
