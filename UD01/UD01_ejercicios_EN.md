@@ -1,14 +1,17 @@
 ﻿---
-title: "UD01 exercises"
-language: EN
-author: David Martínez Peña [www.martinezpenya.es]
-subject: Development environments
-keywords: [DE, 2021, Environment, Development]
-IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (ver. ${today}) 
-footer: ${author} - ${IES} - ${pageNo} / ${pageCount}
+    title: UD01 exercises
+    language: EN
+    author: David Martínez Peña [www.martinezpenya.es]
+    subject: Development environments
+    keywords: [DE, 2021, Environment, Development]
+    IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
+    header: ${title} - ${subject} (ver: ${today}) 
+    footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+    typora-root-url:${filename}/../
+    typora-copy-images-to:${filename}/../assets
+    imgcover:/media/DADES/NextCloud/DOCENCIA/ED_2122/ED-CFGS-2122/UD01/assets/cover.png
 ---
-
+[toc]
 # Exercises
 
 1. Define the concepts of hardware and software. Give three examples of each.
@@ -135,18 +138,18 @@ footer: ${author} - ${IES} - ${pageNo} / ${pageCount}
 
 7. Give an example of language of the following types:
 
-   - Low level.
-   - Medium level.
-   - High level.
+   - *Low level.*
+   - *Medium level.*
+   - *High level.*
 
 8. What programming paradigm do the following languages follow?
-   - C
-   - C++
-   - SQL
-   - Java
-   - Javascript
-   - Lisp
-   - Prolog
+   - *C*
+   - *C++*
+   - *SQL*
+   - *Java*
+   - *Javascript*
+   - *Lisp*
+   - *Prolog*
 
    You can check the following link:
    https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n

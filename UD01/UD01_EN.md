@@ -1,13 +1,17 @@
 ---
-title: "UD01: Software development"
-language: EN
-author: David Martínez Peña [www.martinezpenya.es]
-subject: Development environments
-keywords: [DE, 2021, Environment, Development]
-IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (ver. ${today}) 
-footer: ${author} - ${IES} - ${pageNo} / ${pageCount}
+    title: UD01: Software development
+    language: EN
+    author: David Martínez Peña [www.martinezpenya.es]
+    subject: Development environments
+    keywords: [DE, 2021, Environment, Development]
+    IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
+    header: ${title} - ${subject} (ver: ${today}) 
+    footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+    typora-root-url:${filename}/../
+    typora-copy-images-to:${filename}/../assets
+    imgcover:/media/DADES/NextCloud/DOCENCIA/ED_2122/ED-CFGS-2122/UD01/assets/cover.png
 ---
+[toc]
 # Computer program
 
 Definition of computer program:
@@ -48,15 +52,15 @@ Nowadays, with modern processors, the operation, although very similar in essenc
 
 Let's look at other parts of the von Newmann machine:
 
-**Central Process Unit **, known as **CPU **(**Central Process Unit **) or processor. It is the main element of the computer, its job is to coordinate and execute all the instructions that are read from RAM.
+**Central Process Unit**, known as **CPU** (**Central Process Unit**) or processor. It is the main element of the computer, its job is to coordinate and execute all the instructions that are read from RAM.
 
 It's main elements are:
 
-- **ALU **(**Arithmetic-Logical Unit **). A component of the CPU that performs all elementary arithmetic operations (addition, subtraction, multiplication, division) and logical operations (for example, comparing two values).
+- **ALU**(Arithmetic-Logical Unit). A component of the CPU that performs all elementary arithmetic operations (addition, subtraction, multiplication, division) and logical operations (for example, comparing two values).
   
 - **CU** (**Control Unit **). Component of the **CPU **in charge of controlling the actions of the rest of the units, interpreting and executing the instructions in the proper sequence.
 
-- **Microprocessor registers **. They are highly specialized high-speed memory banks, where some data and instructions of a program are stored while it is running.
+- **Microprocessor registers**. They are highly specialized high-speed memory banks, where some data and instructions of a program are stored while it is running.
 
 Generally, the ALU has general-purpose registers, which are used for tasks such as accumulation processes, loop index counting, data transfers, or bit manipulation.
 
@@ -341,7 +345,7 @@ It is a feature that allows you to give different forms to a method, either in t
 
 Method `overloading` consists of implementing the same method several times but with different parameters, so that, when invoking it, the compiler decides which of the methods should be executed, based on the parameters of the call.
 
-An example of an overloaded method is one that calculates the salary of a worker in a company. Depending on the position that the worker occupies, he will have more or less items on his payroll (more or less incentives, for example).
+An example of an overloaded method is one that calculates the salary of an employee in a company. Depending on the position that the worker occupies, he will have more or less items on his payroll (more or less incentives, for example).
 The same method, which we could call `CalculateSalary`, will be implemented differently depending on whether the salary of an operator is calculated (with fewer items on his payroll, which causes the method to receive fewer variables) or if the salary of an operator is calculated. executive.
 
 Method `override` consists of reimplementing a method inherited from a superclass with exactly the same definition (including method name, parameters, and return value).

@@ -1,15 +1,16 @@
 ﻿---
-title: "UD03: Refactoring and version control tools"
+title: UD03: Refactoring and version control tools
 language: EN
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Development Environments
 keywords: [EED, 2021, Environments, Development]
-IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (ver:${today}) 
-footer: ${author} - ${IES} - ${pageNo}/${pageCount}
+IES:IES Mestre Ramón Esteve (Catadau) [iesmre.es]
+header: ${title} - ${subject} (ver: ${today})
+footer: ${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+typora-root-url: ${filename}/../
+typora-copy-images-to: ${filename}/../assets
 ---
-
-
+[toc]
 # Refactoring
 
 The term refactoring within the field of Software Engineering refers to modifying the code without changing its operation. It is used to create a clearer and simpler code, facilitating the subsequent reading or revision of a program. It could be understood as the maintenance of the code, to facilitate its understanding, but without adding or eliminating functionalities. **Refactoring code is about creating cleaner code.**
@@ -158,7 +159,7 @@ longName1 = longName2 * (longName3 + longName4 - longName5)
 		+ (4 * longname6); //Siempre con el operador al principio de línea
 ```
 
-- Blanks improve readability. They must be placed between operators, after semicolons in for loops, after assignment operators, and so on.
+- White spaces improve readability. They must be placed between operators, after semicolons in for loops, after assignment operators, and so on.
 
 ```java
 cantidadTotal = cantidadInicial + cantidadFinal;
@@ -347,8 +348,8 @@ The main classification that can be established is based on the storage of the c
 All version control systems are based on having a repository, which is the set of information managed by the system. East
 repository contains version history of all managed items. Each user can create a local copy by duplicating the content of the repository to allow its use. It is possible to duplicate the latest version or any version stored in history. This process is often known as check out or unprotect. To modify the local copy there are two basic semantics:
 
-- **Exclusive**: to be able to make a change, it is necessary to mark the element to be modified in the repository and the system will take care of preventing another user from modifying said element. 
-- **Collaborative**: in which each user downloads the copy, modifies it, and the system automatically combines the various modifications. The main problem is the possible appearance of conflicts that must be solved manually or the possible inconsistencies that arise when modifying the same file by several uncoordinated people. Also, this semantics is not appropriate for binary files.
+- Exclusive: to be able to make a change, it is necessary to mark the element to be modified in the repository and the system will take care of preventing another user from modifying said element. 
+- Collaborative: in which each user downloads the copy, modifies it, and the system automatically combines the various modifications. The main problem is the possible appearance of conflicts that must be solved manually or the possible inconsistencies that arise when modifying the same file by several uncoordinated people. Also, this semantics is not appropriate for binary files.
 
 After making the modification, it is necessary to update the repository with the changes made. Usually this process is called publish, commit, check in, or protect.
 
@@ -412,8 +413,7 @@ The system is unable to merge the changes. User **Ana** must resolve the conflic
 
 ## Repository
 
-A repository is basically a typical file server, with one big difference: what makes repositories special compared to those
-file servers is that they remember all the changes that have ever been written to them, in this way, every time we update the repository, it remembers every change made to the file or directory structure. In addition, it allows to establish additional information for each update, being able to have an example a changelog of the versions in the repository itself.
+A repository is basically a typical file server, with one big difference: what makes repositories special compared to those file servers is that they remember all the changes that have ever been written to them, in this way, every time we update the repository, it remembers every change made to the file or directory structure. In addition, it allows to establish additional information for each update, being able to have an example a changelog of the versions in the repository itself.
 
 Each version control tool has its own repository, and unfortunately they are not interoperable, that is, you cannot get the data from the repository or update it if the repository and version control do not match. Actually, being a file server (special, but in essence it is the
 same), you could always directly access the files stored in the repository and obtain the code without major problem, but we will not have a version control over said code until we associate it to said repository with the appropriate version control.
@@ -422,7 +422,7 @@ We could also associate a working copy (the one found on our hard drive) to seve
 
 ## Version control tools.
 
-We can find a good offer of version control systems available as proprietary and free software. We see some of the main version control systems on the market
+We can find a good offer of version control systems available as proprietary and free software. We see some of the main version control systems on the market.
 
 **CVS (concurrent versions system)**
 It was one of the most widely used programs in the world of free software for software version control. It is based on the client-server model, there are versions of the program for a multitude of platforms. Its solidity and its proven effectiveness, both in small and large groups of users, made it the tool used by successful free software projects such as Mozilla, OpenOffice.org, KDE or GNOME, among others.

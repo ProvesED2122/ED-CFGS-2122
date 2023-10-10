@@ -1,13 +1,16 @@
 ---
-title: "Anexo UD03: Control de versiones con Git"
+    title: Anexo UD03: Control de versiones con Git
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Entornos de desarrollo
 keywords: [EED, 2021, Entornos, Desarrollo]
 IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (ver: ${today}) 
-footer: ${author} - ${IES} - ${pageNo}/${pageCount}
+header: ${title} - ${subject} (ver: ${today})
+footer: ${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+typora-root-url: ${filename}/../
+typora-copy-images-to: ${filename}/../assets
 ---
+[toc]
 # Git
 
 ## Configuración (`git config`)
@@ -40,7 +43,7 @@ git config --list
 
 ### Creación de un repositorio nuevo (`git init`)
 
-Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada .git que contiene la base de datos donde se registran los cambios en el repositorio.
+Este comando crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada .git que contiene la base de datos donde se registran los cambios en el repositorio.
 
 `git init <nombre-repositorio>` crea un repositorio nuevo con el nombre \<nombre-repositorio\>.
 
@@ -80,7 +83,7 @@ Para guardar los cambios en un repositorio Git utiliza una estructura de tres ni
 
 - **Commit** Contiene información sobre el autor, el momento y el mensaje de los cambios.
 
-- **Árbol (tree)** Cada commit contiene además un árbol donde se registran los nombres y rutas de los cheros en el repositorio cuando se hizo el commit.
+- **Árbol (tree)** Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.
 
 - **Blob (binary file object)** Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero  cuando se hizo el commit. 
 
@@ -88,7 +91,7 @@ Para guardar los cambios en un repositorio Git utiliza una estructura de tres ni
 
 ### Referenciar un commit
 
-Cada commit tiene asociado un código hash de 40 caracteres hexadecimales que lo identi ca de manera única. Hay dos formas de referirse a un commit:
+Cada commit tiene asociado un código hash de 40 caracteres hexadecimales que lo identifica de manera única. Hay dos formas de referirse a un commit:
 
 - **Nombre absoluto**: Se utiliza su código hash (basta indicar los 4 o 5 primeros dígitos).
 - **Nombre relativo**: Se utiliza la palabra **HEAD** para referirse siempre al último commit. Para referirse al penúltimo commit se utiliza **HEAD~1**, al antepenúltimo **HEAD~2**, etc.

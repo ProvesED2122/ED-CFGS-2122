@@ -1,14 +1,16 @@
 ---
-title: "Anexo UD02: Instalando y usando entornos de desarrollo"
-version: 20210827
+title: Anexo UD02: Herramientas útiles del IDE
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Entornos de desarrollo
 keywords: [EED, 2021, Entornos, Desarrollo]
 IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (${version}) 
-footer: ${author} - ${IES} - ${pageNo}/${pageCount}
+header: ${title} - ${subject} (ver: ${today})
+footer: ${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+typora-root-url: ${filename}/../
+typora-copy-images-to: ${filename}/../assets
 ---
+[toc]
 # Herramientas útiles del IDE
 
 ## Netbeans

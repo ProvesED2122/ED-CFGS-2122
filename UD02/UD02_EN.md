@@ -1,17 +1,20 @@
 ﻿---
-title: "UD02: Installing and using Development Environments"
-language: ES
-author: David Martínez Peña [www.martinezpenya.es]
-subject: Development Environments
-IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-keywords: [EED, 2021, Development, Environments]
-header: ${title} - ${subject} (ver. ${today})
-footer: ${author} - ${IES} - ${pageNo}/${pageCount}
+    title: UD02: Installing and using Development Environments
+    language: ES
+    author: David Martínez Peña [www.martinezpenya.es]
+    subject: Development Environments
+    IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
+    keywords: [EED, 2021, Development, Environments]
+    header: ${title} - ${subject} (ver. ${today})
+    footer:${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+    typora-root-url:${filename}/../
+    typora-copy-images-to:${filename}/../assets
+    imgcover:/media/DADES/NextCloud/DOCENCIA/ED_2122/ED-CFGS-2122/UD02/assets/cover.png
 ---
-
+[toc]
 # History
 
-In the previous unit we talked about the phases in the software development process.
+Previously, at unit 1, we talked about the phases in the software development process.
 One of them was the coding phase, in which a programming language was used to pass all the actions that the application had to carry out into a language that the machine was capable of understanding and executing.
 Reference was also made to tools to support the programming process.
 In this unit we are going to analyze, install and run these tools to understand their action and effect.
@@ -202,6 +205,7 @@ In the first two cases, you just have to follow the usual installation procedure
 In the latter case, however, you have to unzip the file and copy it to the folder where you want to install. Normally, all users will have read and execute permission to this folder.
 
 > Starting with JDK version 11, Oracle distributes the software with a significantly more restrictive license than previous versions. In particular, it can only be used to "develop, test, prototype and demonstrate your applications." Any use "for internal commercial, production or business purposes" other than that mentioned above is explicitly excluded.
+>
 > If you need it for any of these uses not allowed in the new license, in addition to the previous versions of the JDK, there are reference versions of these versions licensed "GNU General Public License version 2, with the Classpath Exception", which allows most of the usual uses. These versions are linked to the same download page and also to the address jdk.java.net.
 
 An alternative is to use https://adoptium.net/ formerly known as adoptOpenJDK, which has now been integrated into the Eclipse foundation. From there we can download the binaries of the openJDK version for our platform without restrictions. [Full story] (https://es.wikipedia.org/wiki/OpenJDK).

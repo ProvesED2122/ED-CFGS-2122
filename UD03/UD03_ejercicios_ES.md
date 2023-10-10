@@ -1,14 +1,16 @@
 ---
-title: "UD03: Ejercicios GIT"
+title: UD03: Ejercicios GIT
 language: ES
 author: David Martínez Peña [www.martinezpenya.es]
 subject: Entornos de desarrollo
 keywords: [EED, 2021, Entornos, Desarrollo]
 IES: IES Mestre Ramón Esteve (Catadau) [iesmre.es]
-header: ${title} - ${subject} (ver:${today}) 
-footer: ${author} - ${IES} - ${pageNo}/${pageCount}
+header: ${title} - ${subject} (ver: ${today})
+footer: ${currentFileName}.pdf - ${author} - ${IES} - ${pageNo}/${pageCount}
+typora-root-url: ${filename}/../
+typora-copy-images-to: ${filename}/../assets
 ---
-
+[toc]
 # Áreas de un repositorio GIT
 
 En esta actividad deberás buscar información y explicar las 3 áreas de un proyecto Git:
@@ -35,8 +37,8 @@ Seguiremos el siguiente proceso:
 Por ejemplo podemos hacer (poner vuestro nombre)
 
 ```sh
-mkdir  pruebas-david
-cd  pruebas-david
+mkdir pruebas-david
+cd pruebas-david
 ```
 
 ## Comprobamos que tenemos la carpeta vacía
@@ -56,7 +58,7 @@ git init
 Ésta es la carpeta donde se registrarán todos los cambios que vayamos realizando.
 
 ```sh
-ls  -la
+ls -la
 ```
 
 Comprueba el contenido de esta nueva carpeta, porqué tiene un punto delante?
@@ -264,7 +266,7 @@ El tercer commit será la versión 2 de nuestro proyecto. La etiqueta será `v2`
 
 El segundo commit no será etiquetado. 
 
-> [REHACER FOTO] la v2 deberia ser "Versión 2"
+> En la captura se muestra un error que más tarde corregiremos en la etiqueta de la v2.
 
 ![git tag](assets/git-tag.png)
 
@@ -582,7 +584,7 @@ git reset --hard
 
 Dicho comando coge el contenido que hay en nuestro commit confirmado y recupera ambos: el directorio de trabajo y el área de preparación.
 
-## 3. ¿Y qué pasa si ya realicé un commit?
+## ¿Y qué pasa si ya realicé un commit?
 
 Imaginemos que hemos ido todavía un poco más lejos, y que además de modificar el directorio de trabajo y añadir los cambios al Staging Area, hemos realizado un commit. Es decir hemos hecho
 
@@ -775,7 +777,7 @@ Este método evita que nuestro usuario y contraseña de GitHub se guarde en un a
 
 Vamos a seguir los siguientes pasos:
 
-## 1. Generamos un par de claves SSH
+## Generamos un par de claves SSH
 
 Es muy sencillo. Como usuario normal (sin ser root) ejecutamos el comando
 
@@ -802,7 +804,7 @@ Debe copiarse  *ssh-rsa  ....  jose@lenovo*
 
 En vuestro caso, en lugar de jose@lenovo aparecerá otro usuario y pc.
 
-## 2. Añadimos clave ssh pública a github.
+## Añadimos clave ssh pública a github.
 
 Iniciamos sesión de GitHub y en el menú general (esquina superior derecha) seleccionamos la opción **Settings**.
 
@@ -824,14 +826,14 @@ Luego ponemos un nombre a la clave, por ejemplo pc-casa. Y copiamos el contenido
 La clave anterior puede usarse para cualquiera de nuestros repositorios. Para hacer uso de ella, lo único que necesitamos es la URL en formato SSH de cada repositorio.
 
 
-## 3. Comprobamos que se ha creado bien
+## Comprobamos que se ha creado bien
 
 Si, por cualquier motivo, alguien accediera a nuestro PC y cogiera la clave privada, bastaría con eliminar esta clave pública de GitHub y al ladrón no le serviría de nada nuestra clave privada.
 
 ![github list ssh keys](assets/github-list-ssh-keys.png)
 
 
-## 4. Obteniendo URL SSH del repositorio
+## Obteniendo URL SSH del repositorio
 
 Botón **Clone or download**, **Use SSH**
 
@@ -841,7 +843,7 @@ Copiamos URL en formato SSH. Su formato es relativamente fácil de memorizar. Si
 
 ![github use ssh 2](assets/github-use-ssh2.png)
 
-## 5. Asociando nuestro repositorio local mediante SSH
+## Asociando nuestro repositorio local mediante SSH
 
 Nuestro repositorio local estaba asociado a origin mediante HTTPS. Debemos dar de baja dicho enlace y crear uno nuevo que haga uso del protocolo SSH.
 
@@ -854,7 +856,7 @@ git  remote  add  origin   git@github.com:tu_usuario/tu_repositorio
 ![git remote remove add](assets/git-remote-remove-add.png)
 
 
-## 6. Creamos un commit y subimos a GitHub.
+## Creamos un commit y subimos a GitHub.
 
 Para comprobar que no nos pide usuario y contraseña cuando hagamos git push, vamos a modificar el archivo README.md , crear un commit y subir a GitHub.
 
@@ -895,7 +897,7 @@ Siempre que realicemos cambios (es decir commits) en el mismo archivo en las mis
 
 Para ver esto, vamos a hacer un commit en nuestro repositorio en GitHub, y luego haremos un commit en nuestro repositorio local. Trabajaremos con el archivo `README.md` únicamente.
 
-## 1. Modificamos archivo README.md remoto
+## Modificamos archivo README.md remoto
 
 En GitHub vamos a modificar el archivo `README.md` y registrar el cambio (commit).
 
@@ -903,7 +905,7 @@ Para ello, entramos en nuestro repositorio remoto, pulsamos sobre el archivo `RE
 y luego pulsamos sobre el lápiz para editar.
 ![readme edit](assets/readme-edit.png)
 
-> Recientemente (mediados de agosto de 2021) gitHub añadió una funcionalidad interesante a todos sus repositorios, y es la posibilidad de abrir el editor vsCode online para cualquier repositorio simplemente usando la `hotkey` ".".
+> Recientemente (mediados de agosto de 2021) gitHub añadió una funcionalidad interesante a todos sus repositorios, y es la posibilidad de abrir el editor vsCode online para cualquier repositorio simplemente usando la `hotkey` "`.`".
 >
 > Por tanto podemos hacer esta modificación tal y como se muestra en las capturas, o pulsar la tecla "." (punto) y usar vsCode Online para hacer la modificación.
 
@@ -922,7 +924,7 @@ GitHub pone una por defecto.
 
 
 
-## 2. Modificamos archivo README.md local
+## Modificamos archivo README.md local
 
 En nuestro repositorio local, también vamos a modificar el archivo README.md.
 
@@ -958,7 +960,7 @@ Simplemente nos dice que debemos actualizar antes nuestro repositorio local con 
 
 Si hemos realizado cambios en nuestro repositorio remoto, deberemos integrarlos en nuestro repositorio local antes de poder subir nuevos cambios locales.
 
-## 4. Se produce conflicto
+## Se produce conflicto
 
 Así que hacemos
 
@@ -1055,7 +1057,7 @@ La opción **`--graph`** nos permite ver las ramas de forma "gráfica".
 Podemos ver también "otra rama" sin nombre con el commit `b0ef` `Update README.md`. 
 En realidad éste es el commit que editamos en GitHub en una actividad anterior y que tuvimos que fusionar en la rama local master, antes de volver a subirlo a GitHub.
 
-# Crear rama mediante `git checkout -b ...`
+## Crear rama mediante `git checkout -b ...`
 
 El comando `git checkout -b  nueva-rama` tiene esencialmente 2 formas:
 
@@ -1115,7 +1117,7 @@ Después de esto, ya podremos cambiar de rama con `git checkout` sin miedo a per
 
 Asegúrate de ejecutar el comando anterior antes de pasar al punto siguiente.
 
-# 2. Crear ramas con git branch ...
+## Crear ramas con `git branch` ...
 
 El comando `git branch  nueva-rama` tiene esencialmente 2 formas:
 
@@ -1191,7 +1193,7 @@ El resultado de `git log --oneline --all --graph` es
 
 ![git log graph 5](assets/git-log-graph5.png)	
 
-## 3. Subir ramas a repositorio remoto
+## Subir ramas a repositorio remoto
 
 Para subir todos los cambios realizados en todas las ramas ejecutamos
 
@@ -1210,6 +1212,7 @@ En **GitHub**, dentro del repositorio correspondiente, podemos ver un gráfico d
 > *NOTA: No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
 
 **Subir a plataforma AULES un documento PDF con las capturas de pantalla y explicaciones pertinentes.**
+
 # Fusión y eliminación de ramas
 
 Esta actividad es una continuación de la anterior. En ella veremos como ealizar **fusión de ramas** (**merge**) y como eliminar apuntadores a ramas antiguas.
@@ -1225,7 +1228,7 @@ Para realizar fusión (merge) de ramas se utiliza el comando
 **`git merge ...`**
 
 
-## 1. Eliminando una rama local
+## Eliminando una rama local
 
 Para eliminar una rama local se usa el comando
 
@@ -1251,19 +1254,19 @@ De esta manera perdemos todas las modificaciones que hubiésemos realizado en di
 
 ![borrar rama2 local](assets/borrar-rama2-local.png)
 
-## 2. Fusionando ramas locales 
+## Fusionando ramas locales 
 
 Vamos a integrar en la rama `master` los cambios realizados en `rama1`, `licencia` y `autor`.
 
 Procederemos de la siguiente forma:
 
-1. Cambiamos a rama master
-2. Fusionamos rama licencia
-3. Fusionamos rama autor
-4. Fusionamos rama rama1
+1. Cambiamos a rama `master`
+2. Fusionamos rama `licencia`
+3. Fusionamos rama `autor`
+4. Fusionamos rama `rama1`
 
 
-### 2.1. Cambiamos a rama master
+### Cambiamos a rama `master`
 
 Es **MUY IMPORTANTE** cambiar a la rama `master`. Si no hacemos el cambio, todas las fusiones se realizarían sobre la rama `autor` (la rama en la que actualmente estamos).
 
@@ -1273,7 +1276,7 @@ git  checkout master
 ```
 
 
-### 2.2. Fusionamos rama licencia
+### Fusionamos rama `licencia`
 
 Antes, fijémonos en la estructura de las ramas. Hacemos 
 ```sh
@@ -1299,11 +1302,9 @@ Observa como queda tras la fusión. Únicamente se han movido los apuntadores `H
 
 > **NOTA: No te preocupes ahora mismo por los apuntadores remotos (los que aparecen en color rojo). Más adelante los sincronizaremos con el repositorio remoto.**
 
-### 2.3. Fusionamos rama autor
+### Fusionamos rama autor
 
-Si en lugar de fusionar una rama que está adelantada respecto a `master`, 
-lo que hacemos es fusionar una rama que está en paralelo con la rama `master`, 
-entonces realizaremos una **fusión de 3 vías** (**3-way merge**)
+Si en lugar de fusionar una rama que está adelantada respecto a `master`,  lo que hacemos es fusionar una rama que está en paralelo con la rama `master`,  entonces realizaremos una **fusión de 3 vías** (**3-way merge**)
 
 Este tipo de fusión puede provocar conflictos. Si ambas ramas contienen modificaciones en las mismas líneas 
 en los mismos archivos puede producirse un conflicto.
@@ -1330,7 +1331,7 @@ Esto siempre sucede en la fusión de 3 vías.
 ![git log graph 9](assets/git-log-graph9.png)	
 
 
-### 2.4. Fusionamos rama rama1
+### Fusionamos rama rama1
 
 Por último, integraremos en master los cambios realizados en la `rama1`. 
 Es un tipo de **fusión de 3 vías**, al igual que el anterior.
@@ -1348,7 +1349,7 @@ Cuando aparezca el editor con el mensaje asociado, aceptaremos el mensaje o lo e
 ![3 way rama1](assets/3-way-rama1.png)	
 
 
-## 3. Subiendo cambios a repositorio remoto
+## Subiendo cambios a repositorio remoto
 
 Para subir al repositorio remoto todos los cambios realizados en nuestro repositorio local, ejecutamos
 
@@ -1359,7 +1360,7 @@ git push origin --all
 ![git push all](assets/git-push-all2.png)	
 
 
-## 4. Eliminando apuntadores a ramas locales
+## Eliminando apuntadores a ramas locales
 
 Para eliminar los apuntadores locales ejecutamos
 
@@ -1371,7 +1372,7 @@ Los apuntadores a `licencia` y `autor` no los eliminaremos, por si en el futuro 
 	
 ![borrar rama1 local](assets/borrar-rama1-local.png)
 
-## 5. Eliminando apuntadores a ramas remotas
+## Eliminando apuntadores a ramas remotas
 
 Para eliminar los apuntadores en el repositorio remoto, ejecutamos
 
@@ -1390,16 +1391,20 @@ Observa como las ramas están actualizadas y sincronizadas con el repositorio re
 
 ![git log graph 10](assets/git-log-graph10.png)
 
-## 6. Comprobando cambios en repositorio remoto
+## Comprobando cambios en repositorio remoto
 
 Para ver un gráfico de las ramas en el repositorio remoto pulsamos en **Insights**, **Network**.
 
 ![github insights network](assets/github-insights-network2.png)
 
-## 7. Tarea propuesta para el alumno/a
+## Tarea propuesta para el alumno/a
 
 Como tarea, se propone
 
 - volver a la rama `licencia`, añadir contenido al archivo `LICENSE` y hacer commit.
 - volver a la rama `autor`, añadir contenido al archivo `AUTHOR` y hacer commit.
 - integrar los cambios de ambas ramas en la rama `master`.
+
+> *NOTA: No borrar los repositorio local ni repositorio remoto. Los volveremos a utilizar en la siguiente actividad.*
+
+**Subir a plataforma AULES un documento PDF con las capturas de pantalla y explicaciones pertinentes.**
